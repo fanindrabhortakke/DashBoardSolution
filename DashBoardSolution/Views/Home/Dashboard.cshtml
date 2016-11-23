@@ -1,0 +1,55 @@
+﻿@using DashBoardSolution.Models;
+@using Resource = DashBoardSolution.Resources.StringConstants;
+@model DashboardData
+<div class="parent-div">
+	<div class="header-text">@Model.ApplicationName</div>
+	<div>
+		<div class="db-connections">
+			<label>@Resource.DB_Connections</label>
+			<div class="connections-div">
+				<table class="connections-table">
+					<tr>
+						<th>@Resource.DbName</th>
+						<th>@Resource.No_Connections</th>
+						<th>@Resource.Query</th>
+					</tr>
+					@{
+						foreach (DatabaseConnection connection in Model.Connections)
+						{
+						<tr>
+							<td>@connection.DatabaseName</td>
+							<td>@connection.NoOfConnections</td>
+							<td>@connection.UserName</td>
+						</tr>
+						}
+					}
+				</table>
+			</div>
+		</div>
+		<div class="db-connections">
+			<label>@Resource.Long_Queries</label>
+			<div class="connections-div">
+				<table class="connections-table">
+					<tr>
+						<th>@Resource.Query</th>
+						<th>@Resource.Elapsed_Time</th>
+						<th>@Resource.Exec_Count</th>
+						<th>@Resource.Last_Executed</th>
+					</tr>
+					@{
+						foreach (DatabaseQuery query in Model.RunningQueries)
+						{
+						<tr>
+							<td class="overfloeEllipses" title="@query.QueryText">@query.QueryText</td>
+							<td class="padLeft">@query.AverageElapsedTime</td>
+							<td>@query.ExecutionCount</td>
+							<td>@query.LastExecutionTime</td>
+						</tr>
+						}
+					}
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+

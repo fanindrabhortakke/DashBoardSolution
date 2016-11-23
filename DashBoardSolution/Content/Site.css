@@ -1,0 +1,67 @@
+﻿body {
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.parent-div {
+	width: 80%;
+	border: 2px solid gainsboro;
+	margin: 10px 0px 0px 10px;
+}
+
+.header-text {
+	text-align: center;
+	font-size: 18px;
+	font-weight: 800;
+	border-bottom: 1px solid gainsboro;
+	margin-bottom: 5px;
+	background-color: #ECECEC;
+}
+
+.db-connections {
+	width: 93%;
+	margin: 0% 3% 0% 3%;
+	padding: 10px;
+}
+
+.connections-div {
+	margin-top: 20px;
+}
+
+.connections-table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	display: table;
+}
+
+	.connections-table tr {
+		border-bottom: 1px solid #ddd;
+	}
+
+	.connections-table th {
+		padding-left: 16px;
+		padding: 8px 8px;
+		display: table-cell;
+		text-align: left;
+		vertical-align: top;
+	}
+
+td.overfloeEllipses {
+	overflow: hidden;
+	width: 540px;
+	height: 24px;
+	text-overflow: ellipsis;
+	float: left;
+	white-space: nowrap;
+}
+
+td.padLeft{
+	padding-left:10px;
+}
