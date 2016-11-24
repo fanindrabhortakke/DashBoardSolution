@@ -19,14 +19,14 @@ namespace DashBoardSolution.Controllers
 		public ActionResult Dashboard()
 		{
 			ApplicationMetricRepository applicationMetricRepository = new ApplicationMetricRepository(ConnectionString);
-			IEnumerable<ApplicationMetric> applicationMetrices = applicationMetricRepository.GetAllApplications();
+			IEnumerable<ApplicationMetric> applicationMetrices = applicationMetricRepository.GetAllApplications;
 			ApplicationMetric applicationMetric = applicationMetrices.FirstOrDefault();
 
 			DashboardMetricsRepository dashboardMetricsRepository = new DashboardMetricsRepository(applicationMetric.ConnectionString);
 			IEnumerable<DashboardMetrics> dashboardInfoList = dashboardMetricsRepository.GetAllDashboardMetrics();
 
 			LongRunningQueriesRepository longRunningQueriesRepository = new LongRunningQueriesRepository(applicationMetric.ConnectionString);
-			IEnumerable<LongRunningQueriesMetrics> longRunningQueryList = longRunningQueriesRepository.GetLongRunningQueries();
+			IEnumerable<LongRunningQueriesMetrics> longRunningQueryList = longRunningQueriesRepository.GetLongRunningQueries;
 
 			DashboardData dashboardData = new DashboardData();
 			dashboardData.ApplicationName = applicationMetric.ApplicationName;

@@ -94,7 +94,7 @@ namespace DashBoardSolution.Controllers
         //
         // GET: /Account/VerifyCode
         [AllowAnonymous]
-        public async Task<ActionResult> VerifyCode(string provider, string returnUrl, bool rememberMe)
+        public async Task<ActionResult> VerifyCode(string provider, System.Uri returnUrl, bool rememberMe)
         {
             // Require that the user has already logged in via username/password or external login
             if (!await SignInManager.HasBeenVerifiedAsync())
@@ -124,7 +124,7 @@ namespace DashBoardSolution.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(model.ReturnUrl);
+                    return RedirectToLocal(model.ReturnUrl.ToString());
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.Failure:

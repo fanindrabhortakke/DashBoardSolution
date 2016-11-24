@@ -15,18 +15,25 @@ namespace Dashboard.DatabaseRead
 		{
 		}
 
-		public IEnumerable<LongRunningQueriesMetrics> GetLongRunningQueries()
+		public IEnumerable<LongRunningQueriesMetrics> GetLongRunningQueries
 		{
 			// DBAs across the country are having strokes 
 			//  over this next command!
-			using(var command = new SqlCommand(DBQueries.LongRunngTransactions))
+			get
 			{
-				return ExecuteQuery(command, System.Data.CommandType.Text);
+				using(var command = new SqlCommand(DBQueries.LongRunningTransactions))
+				{
+					return ExecuteQuery(command, System.Data.CommandType.Text);
+				}
 			}
 		}
 
 		public override LongRunningQueriesMetrics PopulateData(SqlDataReader reader)
 		{
+			if(reader == null)
+			{
+				throw new ArgumentNullException("reader");
+			}
 			return new LongRunningQueriesMetrics
 			{
 				QueryText = reader["statement_text"].ToString(),

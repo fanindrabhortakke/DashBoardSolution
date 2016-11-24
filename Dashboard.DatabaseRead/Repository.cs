@@ -9,11 +9,11 @@ using System.Data.SqlClient;
 
 namespace Dashboard.DatabaseRead
 {
-	public abstract class Repository<T> where T: class
+	public abstract class Repository<T> where T : class
 	{
 		private static SqlConnection _connection;
 
-		public Repository(string connectionString)
+		protected Repository(string connectionString)
 		{
 			_connection = new SqlConnection(connectionString);
 		}
@@ -30,6 +30,11 @@ namespace Dashboard.DatabaseRead
 		/// <returns></returns>
 		protected IEnumerable<T> GetRecords(SqlCommand command)
 		{
+			if(command == null)
+			{
+				throw new ArgumentNullException("command");
+			}
+
 			var list = new List<T>();
 			command.Connection = _connection;
 			_connection.Open();
@@ -63,6 +68,11 @@ namespace Dashboard.DatabaseRead
 		/// <returns></returns>
 		protected IEnumerable<T> ExecuteQuery(SqlCommand command, CommandType commandType)
 		{
+			if(command == null)
+			{
+				throw new ArgumentNullException("command");
+			}
+
 			var list = new List<T>();
 			command.Connection = _connection;
 			command.CommandType = commandType;//CommandType.StoredProcedure;
@@ -76,7 +86,7 @@ namespace Dashboard.DatabaseRead
 					{
 						var record = PopulateData(reader);
 						if(record != null)
-						{ 
+						{
 							list.Add(record);
 						}
 					}

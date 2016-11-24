@@ -31,7 +31,7 @@ namespace DashBoardSolution.Models
         [Required]
         [Display(Name = "Code")]
         public string Code { get; set; }
-        public string ReturnUrl { get; set; }
+        public System.Uri ReturnUrl { get; set; }
 
         [Display(Name = "Remember this browser?")]
         public bool RememberBrowser { get; set; }

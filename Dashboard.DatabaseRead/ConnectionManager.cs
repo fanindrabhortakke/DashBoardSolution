@@ -9,11 +9,10 @@ using System.Data.SqlClient;
 
 namespace Dashboard.DatabaseRead
 {
-	public class ConnectionManager
+	public static class ConnectionManager
 	{
 		public static SqlConnection GetSqlConnection(string connectionString)
 		{
-			//string connectionString = ConfigurationManager.ConnectionStrings["DashboardApplicationConnectionString"].ConnectionString;
 			var connection = new SqlConnection(connectionString);
 			connection.Open();
 			return connection;
