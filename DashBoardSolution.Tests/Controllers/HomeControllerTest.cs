@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright  company="EPAM">
+// <copyright file="HomeControllerTest.cs"  company="EPAM">
 //     Copyright (c) EPAM INDIA. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------

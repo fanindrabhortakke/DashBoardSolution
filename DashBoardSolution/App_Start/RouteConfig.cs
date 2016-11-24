@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright  company="EPAM">
+// <copyright file="RouteConfig.cs"  company="EPAM">
 //     Copyright (c) EPAM INDIA. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------
