@@ -1,67 +1,98 @@
 ﻿body {
-	padding-top: 50px;
-	padding-bottom: 20px;
+    padding-bottom: 20px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333;
+    background-color: #fff;
+    margin: 0px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-	padding-left: 15px;
-	padding-right: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .parent-div {
-	width: 80%;
-	border: 2px solid gainsboro;
-	margin: 10px 0px 0px 10px;
+    box-sizing: border-box;
+    width: 80%;
+    border: 2px solid gainsboro;
+    margin-left: 10px;
+    margin-bottom:10px;
+    margin-top: 25px;
 }
 
 .header-text {
-	text-align: center;
-	font-size: 18px;
-	font-weight: 800;
-	border-bottom: 1px solid gainsboro;
-	margin-bottom: 5px;
-	background-color: #ECECEC;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+    border-bottom: 1px solid gainsboro;
+    margin-bottom: 5px;
+    background-color: #ECECEC;
 }
 
 .db-connections {
-	width: 93%;
-	margin: 0% 3% 0% 3%;
-	padding: 10px;
+    box-sizing: border-box;
+    width: 93%;
+    margin-top:3%;
+    padding: 10px;
 }
 
 .connections-div {
-	margin-top: 20px;
+    margin-top: 20px;
 }
 
 .connections-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-	width: 100%;
-	display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
 }
 
-	.connections-table tr {
-		border-bottom: 1px solid #ddd;
-	}
+    .connections-table tr {
+        border-bottom: 1px solid #ddd;
+    }
 
-	.connections-table th {
-		padding-left: 16px;
-		padding: 8px 8px;
-		display: table-cell;
-		text-align: left;
-		vertical-align: top;
-	}
+    .connections-table th {
+        padding-left: 16px;
+        padding: 8px 8px;
+        display: table-cell;
+        text-align: left;
+        vertical-align: top;
+    }
 
-td.overfloeEllipses {
-	overflow: hidden;
-	width: 540px;
-	height: 24px;
-	text-overflow: ellipsis;
-	float: left;
-	white-space: nowrap;
+.overfloeEllipses {
+    overflow: hidden;
+    width: 540px;
+    height: 24px;
+    text-overflow: ellipsis;
+    float: left;
+    white-space: nowrap;
 }
 
-td.padLeft{
-	padding-left:10px;
+.padLeft {
+    padding-left: 10px;
+}
+
+div.body-content {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1170px;
+}
+
+.navbar-fixed-top {
+    background-color: #222;
+    border-color: #080808;
+    height: 50px;
 }

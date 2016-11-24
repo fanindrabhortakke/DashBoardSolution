@@ -1,23 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using System.Data;
 using System.Data.SqlClient;
 
 namespace Dashboard.DatabaseRead
 {
+	/// <summary>
+	/// Base Repository
+	/// </summary>
+	/// <typeparam name="T"></typeparam>
 	public abstract class Repository<T> where T : class
 	{
-		private static SqlConnection _connection;
-
+		/// <summary>
+		/// connection object
+		/// </summary>
+		private static SqlConnection connection;
+		/// <summary>
+		/// Repository Constructor
+		/// </summary>
+		/// <param name="connectionString">connectionSTring</param>
 		protected Repository(string connectionString)
 		{
-			_connection = new SqlConnection(connectionString);
+			connection = new SqlConnection(connectionString);
 		}
-
+		/// <summary>
+		/// Fetch Data Method
+		/// </summary>
+		/// <param name="reader">SQL Data Reader</param>
+		/// <returns>Null</returns>
 		public virtual T PopulateData(SqlDataReader reader)
 		{
 			return null;
@@ -26,8 +36,8 @@ namespace Dashboard.DatabaseRead
 		/// <summary>
 		/// Execute directly query
 		/// </summary>
-		/// <param name="command"></param>
-		/// <returns></returns>
+		/// <param name="command">SQL Command</param>
+		/// <returns>Result List</returns>
 		protected IEnumerable<T> GetRecords(SqlCommand command)
 		{
 			if(command == null)
@@ -36,8 +46,8 @@ namespace Dashboard.DatabaseRead
 			}
 
 			var list = new List<T>();
-			command.Connection = _connection;
-			_connection.Open();
+			command.Connection = connection;
+			connection.Open();
 			try
 			{
 				var reader = command.ExecuteReader();
@@ -55,7 +65,7 @@ namespace Dashboard.DatabaseRead
 			}
 			finally
 			{
-				_connection.Close();
+				connection.Close();
 			}
 			return list;
 		}
@@ -65,7 +75,7 @@ namespace Dashboard.DatabaseRead
 		/// </summary>
 		/// <param name="command"></param>
 		/// <param name="commandType"></param>
-		/// <returns></returns>
+		/// <returns>Result List</returns>
 		protected IEnumerable<T> ExecuteQuery(SqlCommand command, CommandType commandType)
 		{
 			if(command == null)
@@ -74,9 +84,9 @@ namespace Dashboard.DatabaseRead
 			}
 
 			var list = new List<T>();
-			command.Connection = _connection;
-			command.CommandType = commandType;//CommandType.StoredProcedure;
-			_connection.Open();
+			command.Connection = connection;
+			command.CommandType = commandType;
+			connection.Open();
 			try
 			{
 				var reader = command.ExecuteReader();
@@ -98,7 +108,7 @@ namespace Dashboard.DatabaseRead
 			}
 			finally
 			{
-				_connection.Close();
+				connection.Close();
 			}
 			return list;
 		}

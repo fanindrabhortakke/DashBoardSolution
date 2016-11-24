@@ -9,16 +9,29 @@ using System.Web.Mvc;
 
 namespace DashboardSolution.Controllers
 {
+	/// <summary>
+	/// Home Controller
+	/// </summary>
 	public class HomeController : Controller
 	{
-		readonly string ConnectionString = string.Empty;
+		/// <summary>
+		/// Connection String Variable
+		/// </summary>
+		private readonly string connectionString = string.Empty;
+		/// <summary>
+		/// Home Controller Constructor
+		/// </summary>
 		public HomeController() 
 		{
-			ConnectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+			this.connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 		}
+		/// <summary>
+		/// Main Action Method
+		/// </summary>
+		/// <returns></returns>
 		public ActionResult Dashboard()
 		{
-			ApplicationMetricRepository applicationMetricRepository = new ApplicationMetricRepository(ConnectionString);
+			ApplicationMetricRepository applicationMetricRepository = new ApplicationMetricRepository(this.connectionString);
 			IEnumerable<ApplicationMetric> applicationMetrices = applicationMetricRepository.GetAllApplications;
 			ApplicationMetric applicationMetric = applicationMetrices.FirstOrDefault();
 
@@ -31,7 +44,8 @@ namespace DashboardSolution.Controllers
 			DashboardData dashboardData = new DashboardData();
 			dashboardData.ApplicationName = applicationMetric.ApplicationName;
 			
-			foreach (var data in dashboardInfoList) {
+			foreach (var data in dashboardInfoList)
+			{
 				dashboardData.Connections.Add(new DatabaseConnection(data));
 			}
 			
@@ -39,7 +53,7 @@ namespace DashboardSolution.Controllers
 			{
 				dashboardData.RunningQueries.Add(new DatabaseQuery(data));
 			}
-			return View("Dashboard", dashboardData);
+			return this.View("Dashboard", dashboardData);
 		}
 	}
 }
