@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//-----------------------------------------------------------------------
+// <copyright  company="EPAM">
+//     Copyright (c) EPAM INDIA. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
 
 namespace Dashboard.DatabaseRead
-{/// <summary>
-/// Model  for DashBoard Metric
-/// </summary>
+{
+	/// <summary>
+	/// Model  for DashBoard Metric
+	/// </summary>
 	public class DashboardMetrics
 	{
 		/// <summary>

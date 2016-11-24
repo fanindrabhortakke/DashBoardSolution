@@ -1,4 +1,9 @@
-﻿using System.Collections.Generic;
+﻿//-----------------------------------------------------------------------
+// <copyright  company="EPAM">
+//     Copyright (c) EPAM INDIA. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+using System.Collections.Generic;
 
 namespace DashboardSolution.Models
 {
@@ -27,8 +32,8 @@ namespace DashboardSolution.Models
 		/// </summary>
 		public DashboardData()
 		{
-			RunningQueries = new List<DatabaseQuery>();
-			Connections = new List<DatabaseConnection>();
+			this.RunningQueries = new List<DatabaseQuery>();
+			this.Connections = new List<DatabaseConnection>();
 		}
 	}
 }

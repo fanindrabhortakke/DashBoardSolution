@@ -1,4 +1,9 @@
-﻿using System.Web.Http;
+﻿//-----------------------------------------------------------------------
+// <copyright  company="EPAM">
+//     Copyright (c) EPAM INDIA. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+using System.Web.Http;
 
 namespace DashboardSolution
 {
@@ -19,9 +24,7 @@ namespace DashboardSolution
 				throw new System.ArgumentNullException("config");
 			}
 
-			// Web API configuration and services
-
-			// Web API routes
+		
 			config.MapHttpAttributeRoutes();
 
 			config.Routes.MapHttpRoute(

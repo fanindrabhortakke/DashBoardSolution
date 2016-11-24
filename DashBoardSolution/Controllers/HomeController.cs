@@ -1,11 +1,14 @@
-﻿using Dashboard.DatabaseRead;
-using DashboardSolution.Models;
-using System;
+﻿//-----------------------------------------------------------------------
+// <copyright  company="EPAM">
+//     Copyright (c) EPAM INDIA. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
+using Dashboard.DatabaseRead;
+using DashboardSolution.Models;
 
 namespace DashboardSolution.Controllers
 {

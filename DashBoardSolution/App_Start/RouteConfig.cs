@@ -1,4 +1,9 @@
-﻿using System.Web.Mvc;
+﻿//-----------------------------------------------------------------------
+// <copyright  company="EPAM">
+//     Copyright (c) EPAM INDIA. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace DashboardSolution

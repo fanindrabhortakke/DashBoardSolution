@@ -1,4 +1,9 @@
-﻿using System;
+﻿//-----------------------------------------------------------------------
+// <copyright  company="EPAM">
+//     Copyright (c) EPAM INDIA. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -8,7 +13,7 @@ namespace Dashboard.DatabaseRead
 	/// <summary>
 	/// Base Repository
 	/// </summary>
-	/// <typeparam name="T"></typeparam>
+	/// <typeparam name="T"> Type of Model</typeparam>
 	public abstract class Repository<T> where T : class
 	{
 		/// <summary>

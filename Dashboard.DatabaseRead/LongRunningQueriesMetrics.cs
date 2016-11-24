@@ -1,7 +1,13 @@
-﻿namespace Dashboard.DatabaseRead
-{/// <summary>
- /// class LongRunningQueriesMetrics
- /// </summary>
+﻿//-----------------------------------------------------------------------
+// <copyright  company="EPAM">
+//     Copyright (c) EPAM INDIA. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+namespace Dashboard.DatabaseRead
+{
+	/// <summary>
+	/// class LongRunningQueriesMetrics
+	/// </summary>
 	public class LongRunningQueriesMetrics
 	{
 		/// <summary>

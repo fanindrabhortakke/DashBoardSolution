@@ -1,4 +1,9 @@
-﻿namespace Dashboard.DatabaseRead
+﻿//-----------------------------------------------------------------------
+// <copyright  company="EPAM">
+//     Copyright (c) EPAM INDIA. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+namespace Dashboard.DatabaseRead
 {
 	/// <summary>
 	/// DB Queries

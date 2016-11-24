@@ -1,4 +1,9 @@
-﻿using Dashboard.DatabaseRead;
+﻿//-----------------------------------------------------------------------
+// <copyright  company="EPAM">
+//     Copyright (c) EPAM INDIA. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+using Dashboard.DatabaseRead;
 
 namespace DashboardSolution.Models
 {
@@ -17,9 +22,9 @@ namespace DashboardSolution.Models
 			{
 				throw new System.ArgumentNullException("dashboardMetric");
 			}
-			DatabaseName = dashboardMetric.DatabaseName;
-			NoOfConnections = dashboardMetric.NoOfConnections;
-			UserName = dashboardMetric.UserName;
+			this.DatabaseName = dashboardMetric.DatabaseName;
+			this.NoOfConnections = dashboardMetric.NoOfConnections;
+			this.UserName = dashboardMetric.UserName;
 		}
 	}
 }

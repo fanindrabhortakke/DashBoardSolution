@@ -1,4 +1,9 @@
-﻿using System.Collections.Generic;
+﻿//-----------------------------------------------------------------------
+// <copyright  company="EPAM">
+//     Copyright (c) EPAM INDIA. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+using System.Collections.Generic;
 using System.Data.SqlClient;
 
 namespace Dashboard.DatabaseRead
@@ -26,7 +31,7 @@ namespace Dashboard.DatabaseRead
 			{
 				using(var command = new SqlCommand(DBQueries.IncludedApplications))
 				{
-					return ExecuteQuery(command, System.Data.CommandType.Text);
+					return this.ExecuteQuery(command, System.Data.CommandType.Text);
 				}
 			}
 		}

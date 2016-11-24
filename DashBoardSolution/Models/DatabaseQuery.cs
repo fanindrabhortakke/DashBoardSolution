@@ -1,4 +1,9 @@
-﻿using Dashboard.DatabaseRead;
+﻿//-----------------------------------------------------------------------
+// <copyright  company="EPAM">
+//     Copyright (c) EPAM INDIA. All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+using Dashboard.DatabaseRead;
 
 namespace DashboardSolution.Models
 {
@@ -17,10 +22,10 @@ namespace DashboardSolution.Models
 			{
 				throw new System.ArgumentNullException("longRunningQueriesMetrics");
 			}
-			QueryText = longRunningQueriesMetrics.QueryText;
-			AverageElapsedTime = longRunningQueriesMetrics.AverageElapsedTime;
-			LastExecutionTime = longRunningQueriesMetrics.LastExecutionTime;
-			ExecutionCount = longRunningQueriesMetrics.ExecutionCount;
+			this.QueryText = longRunningQueriesMetrics.QueryText;
+			this.AverageElapsedTime = longRunningQueriesMetrics.AverageElapsedTime;
+			this.LastExecutionTime = longRunningQueriesMetrics.LastExecutionTime;
+			this.ExecutionCount = longRunningQueriesMetrics.ExecutionCount;
 		}
 	}
 }
