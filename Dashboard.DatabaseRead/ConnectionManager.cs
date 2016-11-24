@@ -9,13 +9,13 @@ using System.Data.SqlClient;
 
 namespace Dashboard.DatabaseRead
 {
-	public static class ConnectionManager
-	{
-		public static SqlConnection GetSqlConnection(string connectionString)
-		{
-			var connection = new SqlConnection(connectionString);
-			connection.Open();
-			return connection;
-		}
-	}
+	//public static class ConnectionManager
+	//{
+	//	//public static SqlConnection GetSqlConnection(string connectionString)
+	//	//{
+	//	//	var connection = new SqlConnection(connectionString);
+	//	//	connection.Open();
+	//	//	return connection;
+	//	//}
+	//}
 }

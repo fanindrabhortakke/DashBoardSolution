@@ -1,6 +1,6 @@
 ﻿using Dashboard.DatabaseRead;
 
-namespace DashBoardSolution.Models
+namespace DashboardSolution.Models
 {
 	public class DatabaseConnection : DashboardMetrics
 	{

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DashBoardSolution.Models
+namespace DashboardSolution.Models
 {
 	public class DashboardData
 	{

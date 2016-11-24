@@ -16,13 +16,16 @@ namespace Dashboard.DatabaseRead
 		{
 		}
 
-		public IEnumerable<DashboardMetrics> GetAllDashboardMetrics()
+		public IEnumerable<DashboardMetrics> GetAllDashboardMetrics
 		{
-			// DBAs across the country are having strokes 
-			//  over this next command!
-			using(var command = new SqlCommand(DBQueries.UsersConnectedToDatabase))
+			get
 			{
-				return ExecuteQuery(command, System.Data.CommandType.Text);
+				// DBAs across the country are having strokes 
+				//  over this next command!
+				using(var command = new SqlCommand(DBQueries.UsersConnectedToDatabase))
+				{
+					return ExecuteQuery(command, System.Data.CommandType.Text);
+				}
 			}
 		}
 

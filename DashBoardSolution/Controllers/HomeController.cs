@@ -1,5 +1,5 @@
 ﻿using Dashboard.DatabaseRead;
-using DashBoardSolution.Models;
+using DashboardSolution.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace DashBoardSolution.Controllers
+namespace DashboardSolution.Controllers
 {
 	public class HomeController : Controller
 	{
@@ -23,7 +23,7 @@ namespace DashBoardSolution.Controllers
 			ApplicationMetric applicationMetric = applicationMetrices.FirstOrDefault();
 
 			DashboardMetricsRepository dashboardMetricsRepository = new DashboardMetricsRepository(applicationMetric.ConnectionString);
-			IEnumerable<DashboardMetrics> dashboardInfoList = dashboardMetricsRepository.GetAllDashboardMetrics();
+			IEnumerable<DashboardMetrics> dashboardInfoList = dashboardMetricsRepository.GetAllDashboardMetrics;
 
 			LongRunningQueriesRepository longRunningQueriesRepository = new LongRunningQueriesRepository(applicationMetric.ConnectionString);
 			IEnumerable<LongRunningQueriesMetrics> longRunningQueryList = longRunningQueriesRepository.GetLongRunningQueries;

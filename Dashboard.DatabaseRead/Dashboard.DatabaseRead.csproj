@@ -44,7 +44,6 @@
   <ItemGroup>
     <Compile Include="ApplicationMetric.cs" />
     <Compile Include="ApplicationMetricRepository.cs" />
-    <Compile Include="ConnectionManager.cs" />
     <Compile Include="DashboardMetrics.cs" />
     <Compile Include="DashboardMetricsRepository.cs" />
     <Compile Include="DBQueries.cs" />

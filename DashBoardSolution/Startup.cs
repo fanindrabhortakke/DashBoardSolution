@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(DashBoardSolution.Startup))]
-namespace DashBoardSolution
+[assembly: OwinStartupAttribute(typeof(DashboardSolution.Startup))]
+namespace DashboardSolution
 {
     public partial class Startup
     { 

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DashBoardSolution.Resources {
+namespace DashboardSolution.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace DashBoardSolution.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DashBoardSolution.Resources.StringConstants", typeof(StringConstants).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DashboardSolution.Resources.StringConstants", typeof(StringConstants).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
