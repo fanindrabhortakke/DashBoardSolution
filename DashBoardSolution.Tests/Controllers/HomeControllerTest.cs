@@ -1,19 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Web.Mvc;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DashboardSolution;
+﻿using System.Web.Mvc;
 using DashboardSolution.Controllers;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DashboardSolution.Tests.Controllers
 {
+	/// <summary>
+	/// Home Controller TestClass
+	/// </summary>
 	[TestClass]
 	public class HomeControllerTest
 	{
+		/// <summary>
+		/// Method to Test Dashboard View
+		/// </summary>
 		[TestMethod]
-		public void ShouldReturnIndexView() 
+		public void ShouldReturnIndexView()
 		{
 			// Arrange
 			HomeController controller = new HomeController();
@@ -26,5 +27,5 @@ namespace DashboardSolution.Tests.Controllers
 
 			controller.Dispose();
 		}
-    }
+	}
 }

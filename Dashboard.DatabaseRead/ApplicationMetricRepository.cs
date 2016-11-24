@@ -3,13 +3,23 @@ using System.Data.SqlClient;
 
 namespace Dashboard.DatabaseRead
 {
+	/// <summary>
+	/// Repository for to get Application metric
+	/// </summary>
 	public class ApplicationMetricRepository : Repository<ApplicationMetric>
 	{
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="connectionString"></param>
 		public ApplicationMetricRepository(string connectionString)
 			: base(connectionString)
 		{
 		}
 
+		/// <summary>
+		/// Gets all applications
+		/// </summary>
 		public IEnumerable<ApplicationMetric> GetAllApplications
 		{
 			get
@@ -21,6 +31,11 @@ namespace Dashboard.DatabaseRead
 			}
 		}
 
+		/// <summary>
+		/// Method to Populate Data
+		/// </summary>
+		/// <param name="reader">reader</param>
+		/// <returns>returns populated data</returns>
 		public override ApplicationMetric PopulateData(SqlDataReader reader)
 		{
 			if(reader == null)

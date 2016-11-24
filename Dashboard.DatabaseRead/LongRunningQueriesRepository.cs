@@ -1,20 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using System.Data.SqlClient;
 
 namespace Dashboard.DatabaseRead
 {
+	/// <summary>
+	/// Repository to get Long Running Queries
+	/// </summary>
 	public class LongRunningQueriesRepository : Repository<LongRunningQueriesMetrics>
 	{
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="connectionString"></param>
 		public LongRunningQueriesRepository(string connectionString)
 			: base(connectionString)
 		{
 		}
 
+		/// <summary>
+		/// Get Long Running queries
+		/// </summary>
 		public IEnumerable<LongRunningQueriesMetrics> GetLongRunningQueries
 		{
 			// DBAs across the country are having strokes 
@@ -28,6 +35,11 @@ namespace Dashboard.DatabaseRead
 			}
 		}
 
+		/// <summary>
+		/// Method for Long Running Queries metric
+		/// </summary>
+		/// <param name="reader"> reader</param>
+		/// <returns> Returns Populated Data</returns>
 		public override LongRunningQueriesMetrics PopulateData(SqlDataReader reader)
 		{
 			if(reader == null)

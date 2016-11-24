@@ -1,21 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-//using System.Data.Entity.Core.Objects;
 using System.Data.SqlClient;
 
 namespace Dashboard.DatabaseRead
 {
+	/// <summary>
+	/// Repository for Dashboard Metrics
+	/// </summary>
 	public class DashboardMetricsRepository : Repository<DashboardMetrics>
 	{
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="connectionString"></param>
 		public DashboardMetricsRepository(string connectionString)
 			: base(connectionString)
 		{
 		}
 
+		/// <summary>
+		/// Get All Dashboard Metrics
+		/// </summary>
 		public IEnumerable<DashboardMetrics> GetAllDashboardMetrics
 		{
 			get
@@ -29,6 +34,11 @@ namespace Dashboard.DatabaseRead
 			}
 		}
 
+		/// <summary>
+		/// Method for Populating Data
+		/// </summary>
+		/// <param name="reader">reader</param>
+		/// <returns></returns>
 		public override DashboardMetrics PopulateData(SqlDataReader reader)
 		{
 			if(reader == null)
