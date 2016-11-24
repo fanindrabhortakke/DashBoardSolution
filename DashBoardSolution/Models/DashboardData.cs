@@ -5,8 +5,8 @@ namespace DashBoardSolution.Models
 	public class DashboardData
 	{
 		public string ApplicationName { get; set; }
-		public List<DatabaseConnection> Connections { get; set; }
-		public List<DatabaseQuery> RunningQueries { get; set; }
+		public List<DatabaseConnection> Connections { get; }
+		public List<DatabaseQuery> RunningQueries { get; }
 
 		public DashboardData() 
 		{

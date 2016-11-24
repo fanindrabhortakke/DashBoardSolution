@@ -23,6 +23,8 @@ namespace DashBoardSolution.Tests.Controllers
 
 			//ASSERT
 			Assert.AreEqual("Dashboard", dashboardView.ViewName);
+
+			controller.Dispose();
 		}
     }
 }
