@@ -2,6 +2,7 @@
 // <copyright file="RouteConfig.cs"  company="EPAM">
 //     Copyright (c) EPAM INDIA. All rights reserved.
 // </copyright>
+// <summary>This is the RouteConfig class.</summary>
 //-----------------------------------------------------------------------
 using System.Web.Mvc;
 using System.Web.Routing;

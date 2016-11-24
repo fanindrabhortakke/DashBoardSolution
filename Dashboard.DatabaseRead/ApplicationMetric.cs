@@ -2,6 +2,7 @@
 // <copyright file="ApplicationMetric.cs"  company="EPAM">
 //     Copyright (c) EPAM INDIA. All rights reserved.
 // </copyright>
+// <summary>This is the ApplicationMetric class.</summary>
 //-----------------------------------------------------------------------
 namespace Dashboard.DatabaseRead
 {

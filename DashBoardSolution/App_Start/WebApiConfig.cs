@@ -2,6 +2,7 @@
 // <copyright file="WebApiConfig.cs"  company="EPAM">
 //     Copyright (c) EPAM INDIA. All rights reserved.
 // </copyright>
+// <summary>This is the WebApiConfig class.</summary>
 //-----------------------------------------------------------------------
 using System.Web.Http;
 
@@ -18,13 +19,11 @@ namespace DashboardSolution
 		/// <param name="config">config</param>
 		public static void Register(HttpConfiguration config)
 		{
-
 			if(config == null)
 			{
 				throw new System.ArgumentNullException("config");
 			}
-
-		
+			
 			config.MapHttpAttributeRoutes();
 
 			config.Routes.MapHttpRoute(

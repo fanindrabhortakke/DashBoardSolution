@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="MvcApplication.cs"  company="EPAM">
+// <copyright file="Global.asax.cs"  company="EPAM">
 //     Copyright (c) EPAM INDIA. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------

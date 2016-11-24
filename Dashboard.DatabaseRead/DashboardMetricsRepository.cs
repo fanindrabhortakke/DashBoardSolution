@@ -2,6 +2,7 @@
 // <copyright file="DashboardMetricsRepository.cs"  company="EPAM">
 //     Copyright (c) EPAM INDIA. All rights reserved.
 // </copyright>
+// <summary>This is the DashboardMetricsRepository class.</summary>
 //-----------------------------------------------------------------------
 using System;
 using System.Collections.Generic;

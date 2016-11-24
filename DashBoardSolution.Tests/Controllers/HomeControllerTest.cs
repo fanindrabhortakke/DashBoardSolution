@@ -2,6 +2,7 @@
 // <copyright file="HomeControllerTest.cs"  company="EPAM">
 //     Copyright (c) EPAM INDIA. All rights reserved.
 // </copyright>
+// <summary>This is the HomeControllerTest class.</summary>
 //-----------------------------------------------------------------------
 using System.Web.Mvc;
 using DashboardSolution.Controllers;

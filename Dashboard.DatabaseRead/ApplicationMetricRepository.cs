@@ -2,6 +2,7 @@
 // <copyright file="ApplicationMetricRepository.cs"  company="EPAM">
 //     Copyright (c) EPAM INDIA. All rights reserved.
 // </copyright>
+// <summary>This is the ApplicationMetricRepository class.</summary>
 //-----------------------------------------------------------------------
 using System.Collections.Generic;
 using System.Data.SqlClient;

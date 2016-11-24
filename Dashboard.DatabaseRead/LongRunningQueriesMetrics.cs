@@ -2,6 +2,7 @@
 // <copyright file="LongRunningQueriesMetrics.cs"  company="EPAM">
 //     Copyright (c) EPAM INDIA. All rights reserved.
 // </copyright>
+// <summary>This is the LongRunningQueriesMetrics class.</summary>
 //-----------------------------------------------------------------------
 namespace Dashboard.DatabaseRead
 {
