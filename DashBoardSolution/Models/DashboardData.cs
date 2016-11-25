@@ -16,16 +16,19 @@ namespace DashboardSolution.Models
 		/// <summary>
 		/// Get Application Name
 		/// </summary>
+		/// <value>The name of the Application.</value>
 		public string ApplicationName { get; set; }
 
 		/// <summary>
 		/// Get Connections
 		/// </summary>
+		/// <value>Returns Database Connection</value>
 		public List<DatabaseConnection> Connections { get; }
 
 		/// <summary>
 		/// Get Running Queries
 		/// </summary>
+		/// <value>Returns Long Running Queries</value>
 		public List<DatabaseQuery> RunningQueries { get; }
 
 		/// <summary>
@@ -34,8 +37,8 @@ namespace DashboardSolution.Models
 		/// </summary>
 		public DashboardData()
 		{
-			this.RunningQueries = new List<DatabaseQuery>();
 			this.Connections = new List<DatabaseConnection>();
+			this.RunningQueries = new List<DatabaseQuery>();
 		}
 	}
 }

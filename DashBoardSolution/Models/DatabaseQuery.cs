@@ -14,6 +14,7 @@ namespace DashboardSolution.Models
 	public class DatabaseQuery : LongRunningQueriesMetrics
 	{
 		/// <summary>
+		/// Initializes a new instance of the <see cref="DatabaseQuery" /> class.
 		/// Constructor
 		/// </summary>
 		/// <param name="longRunningQueriesMetrics">longRunningQueriesMetrics</param>

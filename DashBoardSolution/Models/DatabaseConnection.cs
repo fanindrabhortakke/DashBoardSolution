@@ -14,6 +14,7 @@ namespace DashboardSolution.Models
 	public class DatabaseConnection : DashboardMetrics
 	{
 		/// <summary>
+		/// Initializes a new instance of the <see cref="DatabaseConnection" /> class.
 		/// Constructor
 		/// </summary>
 		/// <param name="dashboardMetric">DashboardMetrics</param>

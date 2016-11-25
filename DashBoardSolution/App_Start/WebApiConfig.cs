@@ -16,17 +16,17 @@ namespace DashboardSolution
 		/// <summary>
 		/// Method to Register API
 		/// </summary>
-		/// <param name="config">config</param>
-		public static void Register(HttpConfiguration config)
+		/// <param name="httpConfiguration">httpConfiguration</param>
+		public static void Register(HttpConfiguration httpConfiguration)
 		{
-			if(config == null)
+			if(httpConfiguration == null)
 			{
-				throw new System.ArgumentNullException("config");
+				throw new System.ArgumentNullException("httpConfiguration");
 			}
-			
-			config.MapHttpAttributeRoutes();
 
-			config.Routes.MapHttpRoute(
+			httpConfiguration.MapHttpAttributeRoutes();
+
+			httpConfiguration.Routes.MapHttpRoute(
 				name: "DefaultApi",
 				routeTemplate: "api/{controller}/{id}",
 				defaults: new { id = RouteParameter.Optional }

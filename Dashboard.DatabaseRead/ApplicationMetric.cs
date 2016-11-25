@@ -14,10 +14,12 @@ namespace Dashboard.DatabaseRead
 		/// <summary>
 		/// Get or Set Application Name
 		/// </summary>
+		/// <value>Application name</value>
 		public string ApplicationName { get; set; }
 		/// <summary>
 		/// Get or Set ConnectionString
 		/// </summary>
+		/// <value>Connection string</value>
 		public string ConnectionString { get; set; }
 	}
 }

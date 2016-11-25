@@ -29,6 +29,7 @@ namespace Dashboard.DatabaseRead
 		/// <summary>
 		/// Get Long Running queries
 		/// </summary>
+		/// <value>Long Running Query statements</value>
 		public IEnumerable<LongRunningQueriesMetrics> GetLongRunningQueries
 		{
 			// DBAs across the country are having strokes 
@@ -45,7 +46,7 @@ namespace Dashboard.DatabaseRead
 		/// <summary>
 		/// Method for Long Running Queries metric
 		/// </summary>
-		/// <param name="sqlDataReader"> reader</param>
+		/// <param name="sqlDataReader"> sqlDataReader</param>
 		/// <returns> Returns Populated Data</returns>
 		public override LongRunningQueriesMetrics PopulateData(SqlDataReader sqlDataReader)
 		{

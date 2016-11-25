@@ -15,15 +15,18 @@ namespace Dashboard.DatabaseRead
 		/// <summary>
 		/// Get or set Database Name
 		/// </summary>
+		/// <value>Database Name</value>
 		public string DatabaseName { get; set; }
 		/// <summary>
 		/// Get or Set No Of Connections
 		/// </summary>
+		/// <value>Number of Connections</value>
 		public string NoOfConnections { get; set; }
 
 		/// <summary>
 		/// Get or Set UserName
 		/// </summary>
+		/// <value>UserName of accessing sql server</value>
 		public string UserName { get; set; }
 	}
 }

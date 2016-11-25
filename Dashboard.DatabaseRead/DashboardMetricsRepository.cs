@@ -28,6 +28,7 @@ namespace Dashboard.DatabaseRead
 		/// <summary>
 		/// Get All Dashboard Metrics
 		/// </summary>
+		/// <value>Get all dashboard metrics</value>
 		public IEnumerable<DashboardMetrics> GetAllDashboardMetrics
 		{
 			get
@@ -44,7 +45,7 @@ namespace Dashboard.DatabaseRead
 		/// <summary>
 		/// Method for Populating Data
 		/// </summary>
-		/// <param name="sqlDataReader">reader</param>
+		/// <param name="sqlDataReader">sqlDataReader</param>
 		/// <returns> It returns Populated Data</returns>
 		public override DashboardMetrics PopulateData(SqlDataReader sqlDataReader)
 		{

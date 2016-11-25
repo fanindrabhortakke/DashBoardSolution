@@ -18,7 +18,7 @@ namespace Dashboard.DatabaseRead
 		/// Initializes a new instance of the <see cref="ApplicationMetricRepository" /> class.
 		/// Constructor
 		/// </summary>
-		/// <param name="connectionString"></param>
+		/// <param name="connectionString">connectionString</param>
 		public ApplicationMetricRepository(string connectionString)
 			: base(connectionString)
 		{
@@ -27,6 +27,7 @@ namespace Dashboard.DatabaseRead
 		/// <summary>
 		/// Gets all applications
 		/// </summary>
+		/// <value>List of All Applications</value>
 		public IEnumerable<ApplicationMetric> GetAllApplications
 		{
 			get
@@ -41,7 +42,7 @@ namespace Dashboard.DatabaseRead
 		/// <summary>
 		/// Method to Populate Data
 		/// </summary>
-		/// <param name="sqlDataReader">reader</param>
+		/// <param name="sqlDataReader">sqlDataReader</param>
 		/// <returns>returns populated data</returns>
 		public override ApplicationMetric PopulateData(SqlDataReader sqlDataReader)
 		{
