@@ -34,7 +34,7 @@ namespace Dashboard.DatabaseRead
 		/// Fetch Data Method
 		/// </summary>
 		/// <param name="sqlDataReader">SQL Data Reader</param>
-		/// <returns>Null</returns>
+		/// <returns>It returns the rows using data reader</returns>
 		public virtual T PopulateData(SqlDataReader sqlDataReader)
 		{
 			return null;

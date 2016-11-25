@@ -14,6 +14,16 @@ namespace DashboardSolution.Models
 	public class DashboardData
 	{
 		/// <summary>
+		/// Initializes a new instance of the <see cref="DashboardData" /> class
+		/// Constructor 
+		/// </summary>
+		public DashboardData()
+		{
+			this.Connections = new List<DatabaseConnection>();
+			this.RunningQueries = new List<DatabaseQuery>();
+		}
+
+		/// <summary>
 		/// Get Application Name
 		/// </summary>
 		/// <value>The name of the Application.</value>
@@ -30,15 +40,5 @@ namespace DashboardSolution.Models
 		/// </summary>
 		/// <value>Returns Long Running Queries</value>
 		public List<DatabaseQuery> RunningQueries { get; }
-
-		/// <summary>
-		/// Initializes a new instance of the <see cref="DashboardData" /> class
-		/// Constructor 
-		/// </summary>
-		public DashboardData()
-		{
-			this.Connections = new List<DatabaseConnection>();
-			this.RunningQueries = new List<DatabaseQuery>();
-		}
 	}
 }
