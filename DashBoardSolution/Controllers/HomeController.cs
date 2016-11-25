@@ -2,6 +2,7 @@
 // <copyright file="HomeController.cs"  company="EPAM">
 //     Copyright (c) EPAM INDIA. All rights reserved.
 // </copyright>
+// <summary>This is Home Controller class.</summary>
 //-----------------------------------------------------------------------
 using System.Collections.Generic;
 using System.Configuration;

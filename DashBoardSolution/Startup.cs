@@ -2,6 +2,7 @@
 // <copyright file="Startup.cs"  company="EPAM">
 //     Copyright (c) EPAM INDIA. All rights reserved.
 // </copyright>
+// <summary>This is Startup class.</summary>
 //-----------------------------------------------------------------------
 using Microsoft.Owin;
 using Owin;

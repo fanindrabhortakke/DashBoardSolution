@@ -2,6 +2,7 @@
 // <copyright file="Global.asax.cs"  company="EPAM">
 //     Copyright (c) EPAM INDIA. All rights reserved.
 // </copyright>
+// <summary>This is Global class.</summary>
 //-----------------------------------------------------------------------
 using System.Web.Http;
 using System.Web.Mvc;

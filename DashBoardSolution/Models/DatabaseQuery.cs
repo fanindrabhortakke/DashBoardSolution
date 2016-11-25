@@ -2,6 +2,7 @@
 // <copyright file="DatabaseQuery.cs"  company="EPAM">
 //     Copyright (c) EPAM INDIA. All rights reserved.
 // </copyright>
+// <summary>This is DatabaseQuery class.</summary>
 //-----------------------------------------------------------------------
 using Dashboard.DatabaseRead;
 

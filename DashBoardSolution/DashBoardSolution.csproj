@@ -187,7 +187,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StringConstants.resx</DependentUpon>
     </Compile>
-    <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />

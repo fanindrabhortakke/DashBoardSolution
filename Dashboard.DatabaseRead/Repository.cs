@@ -22,6 +22,7 @@ namespace Dashboard.DatabaseRead
 		/// </summary>
 		private static SqlConnection connection;
 		/// <summary>
+		/// Initializes a new instance of the <see cref="Repository{T}"/> class.
 		/// Repository Constructor
 		/// </summary>
 		/// <param name="connectionString">connectionSTring</param>
@@ -79,8 +80,8 @@ namespace Dashboard.DatabaseRead
 		/// <summary>
 		/// Provide capability to execute Query, Stored procedure
 		/// </summary>
-		/// <param name="command"></param>
-		/// <param name="commandType"></param>
+		/// <param name="command">SqlCommand Parameter</param>
+		/// <param name="commandType">commandType Parameter</param>
 		/// <returns>Result List</returns>
 		protected IEnumerable<T> ExecuteQuery(SqlCommand command, CommandType commandType)
 		{

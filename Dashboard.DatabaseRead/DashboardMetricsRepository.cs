@@ -18,7 +18,7 @@ namespace Dashboard.DatabaseRead
 		/// <summary>
 		/// Constructor
 		/// </summary>
-		/// <param name="connectionString"></param>
+		/// <param name="connectionString">Connection string of database</param>
 		public DashboardMetricsRepository(string connectionString)
 			: base(connectionString)
 		{

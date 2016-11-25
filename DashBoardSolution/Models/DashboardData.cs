@@ -2,6 +2,7 @@
 // <copyright file="DashboardData.cs"  company="EPAM">
 //     Copyright (c) EPAM INDIA. All rights reserved.
 // </copyright>
+// <summary>This is DashboardData class.</summary>
 //-----------------------------------------------------------------------
 using System.Collections.Generic;
 
@@ -28,6 +29,7 @@ namespace DashboardSolution.Models
 		public List<DatabaseQuery> RunningQueries { get; }
 
 		/// <summary>
+		/// Initializes a new instance of the <see cref="DashboardData" /> class
 		/// Constructor 
 		/// </summary>
 		public DashboardData()
