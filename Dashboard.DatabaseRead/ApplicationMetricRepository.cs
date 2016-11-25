@@ -15,6 +15,7 @@ namespace Dashboard.DatabaseRead
 	public class ApplicationMetricRepository : Repository<ApplicationMetric>
 	{
 		/// <summary>
+		/// Initializes a new instance of the <see cref="ApplicationMetricRepository" /> class.
 		/// Constructor
 		/// </summary>
 		/// <param name="connectionString"></param>
@@ -40,19 +41,19 @@ namespace Dashboard.DatabaseRead
 		/// <summary>
 		/// Method to Populate Data
 		/// </summary>
-		/// <param name="reader">reader</param>
+		/// <param name="sqlDataReader">reader</param>
 		/// <returns>returns populated data</returns>
-		public override ApplicationMetric PopulateData(SqlDataReader reader)
+		public override ApplicationMetric PopulateData(SqlDataReader sqlDataReader)
 		{
-			if(reader == null)
+			if(sqlDataReader == null)
 			{
-				throw new System.ArgumentNullException("reader");
+				throw new System.ArgumentNullException("sqlDataReader");
 			}
 
 			return new ApplicationMetric
 			{
-				ApplicationName = reader["ApplicationName"].ToString(),
-				ConnectionString = reader["ConnectionString"].ToString()
+				ApplicationName = sqlDataReader["ApplicationName"].ToString(),
+				ConnectionString = sqlDataReader["ConnectionString"].ToString()
 			};
 		}
 	}

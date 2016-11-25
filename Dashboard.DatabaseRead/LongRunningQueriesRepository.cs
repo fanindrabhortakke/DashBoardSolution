@@ -17,9 +17,10 @@ namespace Dashboard.DatabaseRead
 	public class LongRunningQueriesRepository : Repository<LongRunningQueriesMetrics>
 	{
 		/// <summary>
+		/// Initializes a new instance of the <see cref="LongRunningQueriesRepository" /> class.
 		/// Constructor
 		/// </summary>
-		/// <param name="connectionString"></param>
+		/// <param name="connectionString">ConnecionString</param>
 		public LongRunningQueriesRepository(string connectionString)
 			: base(connectionString)
 		{
@@ -44,20 +45,20 @@ namespace Dashboard.DatabaseRead
 		/// <summary>
 		/// Method for Long Running Queries metric
 		/// </summary>
-		/// <param name="reader"> reader</param>
+		/// <param name="sqlDataReader"> reader</param>
 		/// <returns> Returns Populated Data</returns>
-		public override LongRunningQueriesMetrics PopulateData(SqlDataReader reader)
+		public override LongRunningQueriesMetrics PopulateData(SqlDataReader sqlDataReader)
 		{
-			if(reader == null)
+			if(sqlDataReader == null)
 			{
-				throw new ArgumentNullException("reader");
+				throw new ArgumentNullException("sqlDataReader");
 			}
 			return new LongRunningQueriesMetrics
 			{
-				QueryText = reader["statement_text"].ToString(),
-				AverageElapsedTime = reader["avg_elapsed_time"].ToString(),
-				LastExecutionTime = reader["last_execution_time"].ToString(),
-				ExecutionCount = reader["execution_count"].ToString()
+				QueryText = sqlDataReader["statement_text"].ToString(),
+				AverageElapsedTime = sqlDataReader["avg_elapsed_time"].ToString(),
+				LastExecutionTime = sqlDataReader["last_execution_time"].ToString(),
+				ExecutionCount = sqlDataReader["execution_count"].ToString()
 			};
 		}
 	}

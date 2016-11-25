@@ -23,6 +23,7 @@ namespace DashboardSolution.Controllers
 		/// </summary>
 		private readonly string connectionString = string.Empty;
 		/// <summary>
+		///  Initializes a new instance of the <see cref="HomeController" /> class.
 		/// Home Controller Constructor
 		/// </summary>
 		public HomeController() 
@@ -32,7 +33,7 @@ namespace DashboardSolution.Controllers
 		/// <summary>
 		/// Main Action Method
 		/// </summary>
-		/// <returns></returns>
+		/// <returns>It Return ActionResult</returns>
 		public ActionResult Dashboard()
 		{
 			ApplicationMetricRepository applicationMetricRepository = new ApplicationMetricRepository(this.connectionString);

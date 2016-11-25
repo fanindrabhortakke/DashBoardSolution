@@ -80,23 +80,23 @@ namespace Dashboard.DatabaseRead
 		/// <summary>
 		/// Provide capability to execute Query, Stored procedure
 		/// </summary>
-		/// <param name="command">SqlCommand Parameter</param>
+		/// <param name="sqlCommand">SqlCommand Parameter</param>
 		/// <param name="commandType">commandType Parameter</param>
 		/// <returns>Result List</returns>
-		protected IEnumerable<T> ExecuteQuery(SqlCommand command, CommandType commandType)
+		protected IEnumerable<T> ExecuteQuery(SqlCommand sqlCommand, CommandType commandType)
 		{
-			if(command == null)
+			if(sqlCommand == null)
 			{
-				throw new ArgumentNullException("command");
+				throw new ArgumentNullException("sqlCommand");
 			}
 
 			var list = new List<T>();
-			command.Connection = connection;
-			command.CommandType = commandType;
+			sqlCommand.Connection = connection;
+			sqlCommand.CommandType = commandType;
 			connection.Open();
 			try
 			{
-				var reader = command.ExecuteReader();
+				var reader = sqlCommand.ExecuteReader();
 				try
 				{
 					while(reader.Read())

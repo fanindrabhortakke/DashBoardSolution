@@ -17,7 +17,7 @@ namespace DashboardSolution
 		/// <summary>
 		/// Method to Register Routes to default page
 		/// </summary>
-		/// <param name="routes"></param>
+		/// <param name="routes">Route collection parameter</param>
 		public static void RegisterRoutes(RouteCollection routes)
 		{
 			routes.IgnoreRoute("{resource}.axd/{*pathInfo}");

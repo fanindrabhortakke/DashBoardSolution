@@ -16,6 +16,7 @@ namespace Dashboard.DatabaseRead
 	public class DashboardMetricsRepository : Repository<DashboardMetrics>
 	{
 		/// <summary>
+		/// Initializes a new instance of the <see cref="DashboardMetricsRepository" /> class.
 		/// Constructor
 		/// </summary>
 		/// <param name="connectionString">Connection string of database</param>
@@ -43,19 +44,19 @@ namespace Dashboard.DatabaseRead
 		/// <summary>
 		/// Method for Populating Data
 		/// </summary>
-		/// <param name="reader">reader</param>
-		/// <returns></returns>
-		public override DashboardMetrics PopulateData(SqlDataReader reader)
+		/// <param name="sqlDataReader">reader</param>
+		/// <returns> It returns Populated Data</returns>
+		public override DashboardMetrics PopulateData(SqlDataReader sqlDataReader)
 		{
-			if(reader == null)
+			if(sqlDataReader == null)
 			{
-				throw new ArgumentNullException("reader");
+				throw new ArgumentNullException("sqlDataReader");
 			}
 			return new DashboardMetrics
 			{
-				DatabaseName = reader["DBName"].ToString(),
-				NoOfConnections = reader["NumberOfConnections"].ToString(),
-				UserName = reader["Loginame"].ToString()
+				DatabaseName = sqlDataReader["DBName"].ToString(),
+				NoOfConnections = sqlDataReader["NumberOfConnections"].ToString(),
+				UserName = sqlDataReader["Loginame"].ToString()
 			};
 		}
 	}
